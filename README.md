@@ -1,7 +1,7 @@
 # Contribute Emailer
 Automatically email your contributing guidelines to a contributers public email when they open an issue or pull request.
 
-### [test repo](https://github.com/ericwooley/webtask-test)
+### [test repo](https://github.com/ericwooley/webtask-test) Open an issue or PR
 
 ## Installation
 Create a [webtask.io](webtask.io) with the code from `./contribute-response.js`
