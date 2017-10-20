@@ -41,7 +41,7 @@ const getContent = (repoName) =>
     .then(response => response.text())
     .then((text) => ({text: text, html: marked(text)}))
     
-const sendEmail = (mailSender, to, text, html) => {
+const sendEmail = (mailSender, to, text, html, repoName) => {
     console.log('sending mail', config.from, to, config.subject, text, html, repoName)
     mailSender.messages().send({ 
       from: config.from,
