@@ -11,6 +11,7 @@ Create a [webtask.io](webtask.io) with the code from `./contribute-response.js`
   * Set a secret with a key `MAILGUN_DOMAIN` to the domain in webtask
 1. Add a webhook to your repo `https://github.com/<your username>/<your repo>/settings/hooks`
   * Add a webhook to the url from your webhook.io function url.
+  * Set the content type `application/x-www-form-urlencoded`
   * Under `Which events would you like to trigger this webhook?` Select `Issues` and `Pull Requests`
   
 That should be it! Create an issue and give it a shot.
