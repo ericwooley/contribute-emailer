@@ -46,7 +46,7 @@ const sendEmail = (mailSender, to, text, html, repoName) => {
     mailSender.messages().send({ 
       from: config.from,
       to: to,
-      subject: `Thanks for contributing to ${repoName}! Just a couple guidelines`,
+      subject: `Thanks for contributing to ${repoName}! Just a couple things to help us help you.`,
       // text: text, // breaks when you do both? Maybe becuase this version of mailgun-js is very old?
       html: html
     })
