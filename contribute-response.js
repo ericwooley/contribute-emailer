@@ -10,6 +10,9 @@ const config = {
 module.exports = function(context, cb) {
   try {
     const payload = JSON.parse(context.body.payload)
+    if(payload.action !== 'opened') {
+      return cb(null, {error: 'event does not apply'})
+    }
     const repoName = payload.repository.full_name
     const mailer = mailgun(({apiKey: context.secrets.MAILGUN_API_KEY, domain: context.secrets.MAILGUN_DOMAIN}))
     const userApi = payload.sender.url + '?access_token=' + context.secrets.GITHUB_ACCESS_TOKEN
