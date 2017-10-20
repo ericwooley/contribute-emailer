@@ -23,7 +23,6 @@ module.exports = function(context, cb) {
     .then(values => {
       return ({email: values[1], text: values[0].text, html: values[0].html})
     })
-    .then((values) => console.log('made it to here', values) || values)
     .then((values) => sendEmail(mailer, values.email, values.text, values.html, repoName))
     .then((body) => cb(null, body))
     .catch(e =>{
